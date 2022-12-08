@@ -1,0 +1,15 @@
+{
+  "name": "snowgen",
+  "version": "0.0.1",
+  "description": "generate pixel art snow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SecretIdetity",
+  "license": "gpl-3.0",
+  "dependencies": {
+    "canvas": "^2.10.2",
+    "gifencoder": "^2.0.1"
+  }
+}
