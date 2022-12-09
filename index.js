@@ -16,8 +16,9 @@ async function draw() {
     let s = parseInt(process.argv[10]);
     let d = c;
     let z = 0;
-    while (z <= y / s)
+    while (z < y / s)
         z += c;
+    z += c;
     for (let l = 0; l < z; l++) {
         a.forEach(i => {
             i.y += s;
@@ -28,7 +29,7 @@ async function draw() {
                     i.x -= s;
             }
             if (Math.random() * 100 <= Math.abs(parseInt(process.argv[7]))) {
-                parseInt(process.argv[7]) >= 0 ? i.x++ : i.x--;
+                parseInt(process.argv[7]) >= 0 ? i.x += s : i.x -= s;
             }
             i.x >= x ? i.x = i.x - x : null;
             i.x < 0 ? i.x = i.x + x : null;
@@ -64,7 +65,7 @@ async function draw() {
     enc.start();
     enc.setRepeat(0);
     enc.setDelay(process.argv[11]);
-    process.argv[12] ? enc.setTransparent('#000000') : null;
+    process.argv[12] == 1 ? enc.setTransparent('#000000') : null;
     enc.setQuality(10);
     b.forEach(i => {
         enc.addFrame(i);
